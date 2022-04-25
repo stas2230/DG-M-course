@@ -38,7 +38,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
-  z-index: 50;
+  z-index: 60;
 }
 
 .nav--desktop {
