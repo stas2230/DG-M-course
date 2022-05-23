@@ -276,6 +276,12 @@ body {
   background-color: #fff;
 }
 
+.footer {
+  background-color: #232323;
+  text-align: center;
+  padding: 1em 0;
+}
+
 @media (min-width: 992px) {
   .nav {
     -ms-grid-row: 1;

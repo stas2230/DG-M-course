@@ -180,6 +180,14 @@ body {
 	}
 }
 
+// <---------------------------- footer ---------------------------->
+
+.footer{
+	background-color: $dark;
+	text-align: center;
+	padding: 1em 0;
+}
+
 @import './small';
 @import './medium';
 @import './large';
