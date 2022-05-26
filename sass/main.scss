@@ -22,37 +22,35 @@ body {
 // <---------------------------- navigation ---------------------------->
 
 .nav {
-
 	&--mobile {
 		position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: $white;
-        z-index: 60;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: $white;
+		z-index: 60;
 	}
 
 	&--desktop {
 		display: none;
 	}
 
-    &__item{
-        display: block;
-        padding: 1em;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $dark;
+	&__item {
+		display: block;
+		padding: 1em;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $dark;
 
-
-        &:hover{
-            cursor: pointer;
-        }
-    }
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }
 
 // <---------------------------- header ---------------------------->
@@ -116,11 +114,11 @@ body {
 		z-index: -5;
 	}
 
-	&__square-two{
+	&__square-two {
 		display: none;
 	}
 
-	&__arrow-box{
+	&__arrow-box {
 		display: none;
 	}
 }
@@ -128,23 +126,22 @@ body {
 // <---------------------------- navigation ---------------------------->
 
 .nav {
-
 	&-mobile {
 		position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: $white;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: $white;
 		transform: translateX(-102%);
-		transition: transform .3s;
-        z-index: 50;
+		transition: transform 0.3s;
+		z-index: 50;
 
-		&--active{
+		&--active {
 			transform: translateX(0);
 		}
 	}
@@ -153,36 +150,100 @@ body {
 		display: none;
 	}
 
-    &__item{
+	&__item {
 		position: relative;
-        display: inline-block; //important note
-        padding: .5em;
-		margin: .5em 0;
+		display: inline-block; //important note
+		padding: 0.5em;
+		margin: 0.5em 0;
 		font-size: 2rem;
-        color: $dark;
-        text-decoration: none;
-        text-transform: uppercase;
+		color: $dark;
+		text-decoration: none;
+		text-transform: uppercase;
 
-        &:hover{
-            cursor: pointer;
-        }
-    }
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }
 
-.hamburger{
+.hamburger {
 	position: absolute;
 	top: 1em;
 	left: 1em;
 	z-index: 500;
 
-	&-inner, &-inner::before, &-inner::after{
+	&-inner,
+	&-inner::before,
+	&-inner::after {
 		background-color: $white;
+	}
+}
+
+// <---------------------------- cards ---------------------------->
+
+.cards {
+	background-color: $darker;
+	overflow: hidden;
+
+	&__box {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 2em; // gap applies only between cells - it's not the same what padding
+		padding: 6em 2em;
+	}
+
+	&__card {
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: center;
+		// align-content: center;
+		position: relative;
+		display: grid;
+		justify-items: center; // to note
+		padding: 3em;
+		background-color: $dark;
+		border: 2px solid transparent; // border doenst "jump" after hovering an element
+		border-radius: 8px;
+		color: $white;
+		transition: background-color .3s, border 3s;
+
+		&:hover{
+			background-color: $darker;
+			border: 2px solid $gold;
+		}
+
+
+		&--one{
+			grid-column: 1/-1;
+			grid-row: 1/2;
+		}
+		
+		&--two{
+			grid-column: 1/-1;
+			grid-row: 2/3;
+		}
+
+		&--three{
+			grid-column: 1/-1;
+			grid-row: 3/4;
+		}
+	}
+
+	&__card-icon{
+		width: 60px;
+		margin-bottom: 1em;
+	}
+
+	&__card-title{
+		margin-bottom: .6em;
+		text-transform: uppercase;
 	}
 }
 
 // <---------------------------- footer ---------------------------->
 
-.footer{
+.footer {
 	background-color: $dark;
 	text-align: center;
 	padding: 1em 0;

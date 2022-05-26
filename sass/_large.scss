@@ -1,5 +1,4 @@
 @media (min-width: 992px) {
-
 	// <---------------------------- navigation ---------------------------->
 
 	.nav {
@@ -109,22 +108,28 @@
 			width: 30px;
 		}
 	}
+
+	// <---------------------------- cards ---------------------------->
+
+	.cards {
+
+		&__card {
+			transition: background-color 0.3s, border .3s;
+
+			&:hover {
+				background-color: $darker;
+				border: 2px solid $gold;
+			}
+		}
+	}
 }
 
-
-
-
-
-@media (min-width: 1200px){
-
+@media (min-width: 1200px) {
 	// <---------------------------- header ---------------------------->
 
-	.header{
-
-		&__title{
+	.header {
+		&__title {
 			font-size: 5rem;
 		}
 	}
-
-
 }
