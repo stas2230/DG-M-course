@@ -1,3 +1,9 @@
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 @-webkit-keyframes rotate-right {
   from {
     -webkit-transform: rotate(0);
