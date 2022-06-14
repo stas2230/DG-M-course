@@ -5,6 +5,31 @@
     margin: 0 auto;
 }
 
+.section-title{
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 2em;
+    color: $gold;
+    font-size: 3.2rem;
+    font-weight: 200;
+
+    span{
+        font-weight: 700;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: -.1em;
+        left: 0;
+        width: 40px;
+        height: 5px;
+        background-color: $gold;
+    }
+
+
+}
+
 
 @keyframes rotate-right{
     from{

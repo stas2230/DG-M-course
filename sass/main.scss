@@ -241,6 +241,63 @@ body {
 	}
 }
 
+// <---------------------------- invest ---------------------------->
+
+.invest{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr;
+	padding: 6em 2em;
+	background-color: $dark;
+
+	&__title{
+		grid-row: 1/2;
+		grid-column: 1/2;
+	}
+
+	&__boxes{
+		grid-row: 2/3;
+		grid-column: 1/2;
+	}
+
+	&__box:not(:last-child){
+		margin-bottom: 2em;
+	}
+
+	&__box-img{
+		width: 100%;
+		object-fit: cover;
+		filter: sepia();
+	}
+
+	&__box-title{
+		margin: .3em 0;
+		color: $gold;
+		font-size: 2.6rem;
+		font-weight: 200;
+	}
+
+	&__box-text{
+		color: $white;
+		margin-bottom: 0.5em;
+	}
+
+	&__box-link{
+		display: block; // cant display right without this property
+		text-align: right;
+		color: $gold;
+		font-weight: 700;
+		text-decoration: none;
+		cursor: pointer;
+		transition: color .3s;
+
+		&:hover{
+			color: $darkgold;
+		}
+
+	}
+}
+
 // <---------------------------- footer ---------------------------->
 
 .footer {
