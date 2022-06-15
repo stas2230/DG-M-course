@@ -1,5 +1,5 @@
 @media (min-width: 768px) {
-	// <---------------------------- cards ---------------------------->
+	// <---------------------------- cards section ---------------------------->
 
 	.cards {
 		&__box {
@@ -21,6 +21,34 @@
 				grid-column: 3/4;
 				grid-row: 1/2;
 			}
+		}
+	}
+
+	// <---------------------------- invest section ---------------------------->
+
+	.invest{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+
+		&__title{
+			grid-column: 1/2;
+			grid-row: 1/2;
+			font-size: 10em;
+		}
+
+
+		&__boxes{
+			grid-column: 2/3;
+			grid-row: 1/2;
+			border: 2px solid tomato;
+			display: grid;
+			justify-content: end;
+		}
+
+		&__box{
+			border: 2px solid lime;
+			max-width: 400px;
 		}
 	}
 }
